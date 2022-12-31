@@ -1,0 +1,42 @@
+  .loading{
+    width:160px;
+    height:160px;
+    border-radius:130px;
+    border: 15px solid rgba(0,0,0,0.3);/*太さ(solidは棒状ていみ)*/
+    border-top-color: blue;
+    box-sizing:border-box;
+    position:absolute;/*固定*/
+    top:50%;left:50%;/*座標*/
+    margin-top:-80px;
+    margin-left:-80px;
+    animation:loading 1.2s linear infinite;
+    -webkit-animation:loading 1.2s linear infinite;
+  }
+  
+  /*0%アニメスタート　100%アニメ終了*/
+  @keyframes loading{
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+      transform: rotate(180deg);
+
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+  }
+  @-webkit-keyframes loading{
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+      transform: rotate(180deg);
+
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+  }
+  html{height:100%;}
+  body {background-color:rgba(0, 0, 0, 0.416);}
